@@ -89,6 +89,10 @@ def determine_winner(player_input,computer_input):
     if player_input == computer_input:
         print(f'The computer chose {computer_input}')
         print("Tie! Play again.")
+    elif choices[computer_input] == 3 and choices[player_input] == 1:
+        print(f'The computer chose {computer_input}')
+        print('You Won!')
+        return 'W'
     elif choices[player_input] < choices[computer_input] or choices[computer_input] == 1 and choices[player_input] == 3:
         print(f'The computer chose {computer_input}')
         print('You Lost!') 
@@ -108,7 +112,10 @@ def score_write_up(wins,losses):
     print()
     print('-------------------------------------------')
     print(f'Score — You: {wins} | Computer: {losses}')
-    print("You win!!!")
+    if wins > losses:
+        print("You win!!!")
+    else:
+        print("You lose!!!")
     print("Thanks for playing!")
     print()
 
