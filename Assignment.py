@@ -77,20 +77,29 @@ def get_player_choice():
             return player_input.strip().lower()
         print(f'Sorry, {player_input} is not a valid choice. Please try again.')   
 
+def determine_winner(player_input):
+    # • determine_winner: This function should compare the two choices and return "win", 
+    #   "loss", or "tie"
+    pass
+
+def get_computer_choice():
+    valid_input= ['rock', 'paper','scissors']
+    return valid_input[randint(0,2)]
+
 
 
 if __name__ == "__main__":
-    import random
+    from random import randint
 
     #start game function
     num_rounds = start_game()
     print(num_rounds)
 
     for round in range (int(num_rounds)):
-        get_player_choice()
-    
+        player_choice = get_player_choice()
+        computer_choice = get_computer_choice()
+        determine_winner(player_choice, computer_choice)
 
-    # • determine_winner: This function should compare the two choices and return "win", 
-    #   "loss", or "tie"
+
 
     # show score write up function
