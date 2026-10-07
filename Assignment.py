@@ -69,9 +69,14 @@ def start_game():
 def get_player_choice():
 # get_player_choice: This function should prompt the player, convert the response 
     #   to lowercase, validate the choice, and return the result.
+    valid_input= ['rock', 'paper','scissors']
     print()
-    player_input = input("Enter rock, paper, scissors: ")
-    while not isinstance(player_input, str) or player_input.strip().lower() != "rock" and player_input.strip().lower() != "paper" and player_input.strip().lower() != "scissors":
+    while True:
+        player_input = input("Enter rock, paper, scissors: ")
+        if player_input.strip().lower() in valid_input:
+            return player_input.strip().lower()
+        print(f'Sorry, {player_input} is not a valid choice. Please try again.')   
+
 
 
 if __name__ == "__main__":
