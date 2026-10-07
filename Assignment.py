@@ -98,8 +98,16 @@ def determine_winner(player_input,computer_input):
         return 'W'
 
 def get_computer_choice():
+    #computer chooses rock,paper, or scissors
     valid_input= ['rock', 'paper','scissors']
     return valid_input[randint(0,2)]
+
+def score_write_up(wins,losses):
+    # show score write up function
+    print('-------------------------------------------')
+    print(f'Score — You: {wins} | Computer: {losses}')
+    print("You win!!!")
+    print("Thanks for playing!)")
 
 
 
@@ -123,10 +131,10 @@ if __name__ == "__main__":
         elif score == 'L':
             losses += 1
 
-    # score_write_up(wins,losses)
+    score_write_up(wins,losses)
     
 
 
 
 
-    # show score write up function
+    
