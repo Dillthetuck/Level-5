@@ -85,6 +85,7 @@ def determine_winner(player_input,computer_input):
         "scissors": 2,
         'rock': 3,
     }
+    
     if player_input == computer_input:
         print(f'The computer chose {computer_input}')
         print("Tie! Play again.")
@@ -104,10 +105,12 @@ def get_computer_choice():
 
 def score_write_up(wins,losses):
     # show score write up function
+    print()
     print('-------------------------------------------')
     print(f'Score — You: {wins} | Computer: {losses}')
     print("You win!!!")
-    print("Thanks for playing!)")
+    print("Thanks for playing!")
+    print()
 
 
 
